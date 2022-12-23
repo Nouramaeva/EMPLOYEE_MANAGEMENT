@@ -2,10 +2,14 @@ package com.example.demo.service
 
 import com.example.demo.model.EmployeeDTO
 import com.example.demo.repositories.EmployeeRepository
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
 class EmployeeService(private val employeeRepository: EmployeeRepository) {
+
+
+
 
     fun getEmployees(): List<EmployeeDTO>{
         return employeeRepository.fetchEmployees()
